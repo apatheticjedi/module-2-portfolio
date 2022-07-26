@@ -97,10 +97,12 @@ h2 {
     border: 3px solid rgba(0, 0, 0, 0.5);
     width: 25%;
     height: fit-content;
+    max-height: 250px;
     text-align: right;
     position: absolute;
     bottom: 10px;
     right: 0;
+
 }
 
 /* About Me style */
@@ -182,7 +184,8 @@ h2 {
 .contact-me ul li {
     list-style: none;
     font-weight: bold;
-    display: inline;
+    display: inline-block;
+    padding: 20px 0;
 }
 
 .contact-me ul li a {
@@ -219,7 +222,6 @@ footer ul li {
     margin: 5px 10px;
 }
 
-
 footer div {
     right: 0;
     padding: 0 20px;
@@ -243,4 +245,58 @@ footer div {
     width: 20%;
     min-width: 160px;
     flex-wrap: nowrap;
+}
+
+/* Media query for phones and smaller */
+@media screen and (max-width: 575px) {
+
+    header { 
+        display: block;
+        text-align: center;
+    }
+    .right {
+        position: relative;
+    }
+
+    nav a {
+        display: flex;
+        padding: 10px ;
+        border: 2px solid var(--tertiary-color);
+        border-radius: 15px;
+        justify-content: space-around;
+    }
+
+    nav a:active {
+        color: var(--secondary-color);
+        background-color: var(--tertiary-color);
+    }
+
+    .hero-txt {
+        width: 100%;
+    }
+
+    .content-div {
+        width: 100%;
+        flex-wrap: wrap;
+        border: none;
+    }    
+
+    .projects {
+        width: 100%;
+    }
+
+    .label-div {
+        display: block;
+    }
+
+    .contact-me ul li a{
+        padding: 15px 15px;
+        border: 2px solid var(--secondary-color);
+        border-radius: 15px;
+    }
+
+    .contact-me ul li a:active {
+        color: var(--primary-color);
+        background-color: var(--secondary-color);
+    }
 }
