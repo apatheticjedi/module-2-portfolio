@@ -63,14 +63,32 @@ h2 {
 
 .hero {
     background-image: url(../images/stsci-gallery-1022a-2000x960.jpg);
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
+    background-size: cover;
     height: 250px;
     width: 100%;
     position: relative;
     }
 
-.hero div {
+.profile-img {
+    height: 150px;
+    width: 150px;
+    left: 0;
+    top: 0;
+    border: 3px solid var(--secondary-color);
+    border-radius: 15px;
+    position: relative;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-txt {
     background-color: var(--tertiary-color);
     padding: 5px;
     font-size: 14px;
@@ -100,17 +118,17 @@ h2 {
 
 .projects {
     display: inline-block;
-    width: 49%;
+    width: 48.5%;
     height: 300px;
     justify-content: space-around;
     border: 2px solid var(--secondary-color);
     border-radius: 15px;
     position: relative;
-    max-width: 450px;
+    max-width: 400px;
 }
 
 .projects img {
-    object-fit: fill;
+    object-fit: cover;
     overflow: hidden;
     width: 100%;
     height: 300px;
@@ -118,7 +136,7 @@ h2 {
 }
 
 .projects:first-child {
-    width: 99%;
+    width: 100%;
     max-width: 800px;
 }
 
