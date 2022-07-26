@@ -81,6 +81,7 @@ h2 {
     position: relative;
     object-fit: contain;
     overflow: hidden;
+    margin: auto;
 }
 
 .profile-img img {
@@ -232,12 +233,14 @@ footer div {
     padding: 20px 20px 0;
 }
 
-.label-div{
-    width: 20%;
-}
-
 .content-div{
     width: 75%;
     border-left: 4px solid var(--secondary-color);
     padding-left: 2%;
+}
+
+.label-div{
+    width: 20%;
+    min-width: 160px;
+    flex-wrap: nowrap;
 }
